@@ -130,7 +130,7 @@ Blockly.Css.setCursor = function(cursor) {
  */
 Blockly.Css.CONTENT = [
   '.blocklySvg {',
-  '  background-color: #fff;',
+  '  background-color: transparent;',
   '  overflow: hidden;',  /* IE overflows by default. */
   '}',
 
@@ -311,8 +311,6 @@ Blockly.Css.CONTENT = [
 
   '.blocklyMainBackground {',
   '  fill: url(#blocklyGridPattern);',
-  '  stroke-width: 1;',
-  '  stroke: #c6c6c6;',  /* Equates to #ddd due to border being off-pixel. */
   '}',
 
   '.blocklyMutatorBackground {',
@@ -322,12 +320,15 @@ Blockly.Css.CONTENT = [
   '}',
 
   '.blocklyFlyoutBackground {',
-  '  fill: #ddd;',
-  '  fill-opacity: .8;',
+  '  fill: url(#blocklyGridPattern);',
+	
+	// '   background:#818181 url(../img/bg_meddark.png) 0 0 repeat;',
+
   '}',
 
   '.blocklyColourBackground {',
   '  fill: #666;',
+	
   '}',
 
   '.blocklyScrollbarBackground {',
@@ -392,7 +393,7 @@ Blockly.Css.CONTENT = [
   '  display: none;',
   '  overflow-x: visible;',
   '  overflow-y: auto;',
-  '  position: absolute;',
+  '  position: absolute;',	
   '}',
 
   '.blocklyTreeRoot {',

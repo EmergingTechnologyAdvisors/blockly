@@ -802,7 +802,7 @@ Blockly.BlockSvg.NOTCH_WIDTH = 30;
  * Rounded corner radius.
  * @const
  */
-Blockly.BlockSvg.CORNER_RADIUS = 8;
+Blockly.BlockSvg.CORNER_RADIUS = 2;
 /**
  * Minimum height of field rows.
  * @const
