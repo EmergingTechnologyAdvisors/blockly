@@ -321,14 +321,11 @@ Blockly.Css.CONTENT = [
 
   '.blocklyFlyoutBackground {',
   '  fill: url(#blocklyGridPattern);',
-	
-	// '   background:#818181 url(../img/bg_meddark.png) 0 0 repeat;',
-
   '}',
 
   '.blocklyColourBackground {',
   '  fill: #666;',
-	
+
   '}',
 
   '.blocklyScrollbarBackground {',
@@ -393,7 +390,7 @@ Blockly.Css.CONTENT = [
   '  display: none;',
   '  overflow-x: visible;',
   '  overflow-y: auto;',
-  '  position: absolute;',	
+  '  position: absolute;',
   '}',
 
   '.blocklyTreeRoot {',
