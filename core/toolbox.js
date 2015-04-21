@@ -147,7 +147,7 @@ Blockly.Toolbox.prototype.position_ = function() {
   var svgSize = Blockly.svgSize();
   if (Blockly.RTL) {
     var xy = Blockly.convertCoordinates(0, 0, false);
-    treeDiv.style.left = (xy.x + svgSize.width - treeDiv.offsetWidth) + 'px';
+    treeDiv.style.left = (xy.x + svgSize.width - treeDiv.offsetWidth)-30 + 'px';
   } else {
     treeDiv.style.marginLeft = svgBox.left;
   }
