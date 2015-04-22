@@ -11,6 +11,7 @@ Blockly.JavaScript['take_off'] = function (block) {
     code += 'drone.startPing();\n';
     code += 'drone.flatTrim();\n';
     code += 'drone.takeOff();\n';
+    code += 'console.log("Drone is taking off")\n';
     code += 'drone.flatTrim();\n';
   return code;
 };
