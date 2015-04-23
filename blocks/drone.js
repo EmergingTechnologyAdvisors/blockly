@@ -44,7 +44,7 @@ Blockly.Blocks['land'] = {
     this.setColour(0);
     this.appendDummyInput()
       .appendField('Land');
-    this.setNextStatement(true);
+    this.setPreviousStatement(true);
   }
 };
 
