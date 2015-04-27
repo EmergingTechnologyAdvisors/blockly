@@ -7,12 +7,12 @@
 goog.require('Blockly.JavaScript');
 
 Blockly.JavaScript['take_off'] = function (block) {
-  var code = 'drone.flatTrim();\n';
-    code += 'drone.startPing();\n';
-    code += 'drone.flatTrim();\n';
-    code += 'drone.takeOff();\n';
-    code += 'drone.flatTrim();\n';
-  return code;
+  var code = [
+    'setTimeout(function() {',
+      'drone.takeOff();',
+    '}, 1000);'
+  ];
+  return code.join('\n');
 };
 
 Blockly.JavaScript['land'] = function (block) {
@@ -20,11 +20,11 @@ Blockly.JavaScript['land'] = function (block) {
 };
 
 Blockly.JavaScript['go_forward'] = function (block) {
-  return 'drone.forward({steps: 50});\n';
+  return 'drone.forward({steps: 40});\n';
 };
 
 Blockly.JavaScript['go_backward'] = function (block) {
-  return 'drone.forward({steps: 50});\n';
+  return 'drone.backward({steps: 40});\n';
 };
 
 Blockly.JavaScript['turn_left'] = function (block) {
@@ -44,11 +44,11 @@ Blockly.JavaScript['tilt_right'] = function (block) {
 };
 
 Blockly.JavaScript['go_up'] = function (block) {
-  return 'drone.up();\n';
+  return 'drone.up({steps: 40});\n';
 };
 
 Blockly.JavaScript['go_down'] = function (block) {
-  return 'drone.down();\n';
+  return 'drone.down({steps: 40});\n';
 };
 
 Blockly.JavaScript['flip'] = function (block) {
