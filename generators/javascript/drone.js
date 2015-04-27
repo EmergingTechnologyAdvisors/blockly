@@ -7,12 +7,7 @@
 goog.require('Blockly.JavaScript');
 
 Blockly.JavaScript['take_off'] = function (block) {
-  var code = [
-    'setTimeout(function() {',
-      'drone.takeOff();',
-    '}, 1000);'
-  ];
-  return code.join('\n');
+  return 'drone.takeOff();\n';
 };
 
 Blockly.JavaScript['land'] = function (block) {
