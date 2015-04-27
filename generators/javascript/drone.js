@@ -7,50 +7,134 @@
 goog.require('Blockly.JavaScript');
 
 Blockly.JavaScript['take_off'] = function (block) {
-  var code = [
-    'setTimeout(function() {',
-      'drone.takeOff();',
-    '}, 1000);'
+  var takeOff = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.takeOff();',
+        'drone.flatTrim();',
+      '}',
+    '},'
   ];
-  return code.join('\n');
+  return takeOff.join('\n') + '\n';
 };
 
 Blockly.JavaScript['land'] = function (block) {
-  return 'drone.land();\n';
+  var land = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.land();',
+      '}',
+    '}'
+  ];
+  return land.join('\n') + '\n';
 };
 
 Blockly.JavaScript['go_forward'] = function (block) {
-  return 'drone.forward({steps: 40});\n';
+  var forward = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.forward({steps: 40});',
+      '}',
+    '},'
+  ];
+  return forward.join('\n') + '\n';
 };
 
 Blockly.JavaScript['go_backward'] = function (block) {
-  return 'drone.backward({steps: 40});\n';
+  var backward = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.backward({steps: 40});',
+      '}',
+    '},'
+  ];
+  return backward.join('\n') + '\n';
 };
 
 Blockly.JavaScript['turn_left'] = function (block) {
-  return 'drone.turnLeft({steps: 20});\n';
+  var turnLeft = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.turnLeft({steps: 20});',
+      '}',
+    '},'
+  ];
+  return turnLeft.join('\n') + '\n';
 };
 
 Blockly.JavaScript['turn_right'] = function (block) {
-  return 'drone.turnRight({steps: 20});\n';
+  var turnRight = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.turnRight({steps: 20});',
+      '}',
+    '},'
+  ];
+  return turnRight.join('\n') + '\n';
 };
 
 Blockly.JavaScript['tilt_left'] = function (block) {
-  return 'drone.tiltLeft({steps: 20});\n';
+  var tiltLeft = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.tiltLeft({steps: 20});',
+      '}',
+    '},'
+  ];
+  return tiltLeft.join('\n') + '\n';
 };
 
 Blockly.JavaScript['tilt_right'] = function (block) {
-  return 'drone.tiltRight({steps: 20});\n';
+  var tiltRight = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.tiltRight({steps: 20});',
+      '}',
+    '},'
+  ];
+  return tiltRight.join('\n') + '\n';
 };
 
 Blockly.JavaScript['go_up'] = function (block) {
-  return 'drone.up({steps: 40});\n';
+  var up = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.up({steps: 40});',
+      '}',
+    '},'
+  ];
+  return up.join('\n') + '\n';
 };
 
 Blockly.JavaScript['go_down'] = function (block) {
-  return 'drone.down({steps: 40});\n';
+  var down = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.down({steps: 40});',
+      '}',
+    '},'
+  ];
+  return down.join('\n') + '\n';
 };
 
 Blockly.JavaScript['flip'] = function (block) {
-  return 'drone.frontFlip();\n';
+  var flip = [
+    '{',
+      'delay: 3000,',
+      'task: function () {',
+        'drone.frontFlip({steps: 40});',
+      '}',
+    '},'
+  ];
+  return flip.join('\n') + '\n';
 };
