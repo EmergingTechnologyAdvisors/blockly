@@ -60,7 +60,7 @@ Blockly.JavaScript['turn_left'] = function (block) {
     '{',
       'delay: 3000,',
       'task: function () {',
-        'drone.turnLeft({steps: 20});',
+        'drone.turnLeft({steps: 40});',
       '}',
     '},'
   ];
@@ -72,7 +72,7 @@ Blockly.JavaScript['turn_right'] = function (block) {
     '{',
       'delay: 3000,',
       'task: function () {',
-        'drone.turnRight({steps: 20});',
+        'drone.turnRight({steps: 40});',
       '}',
     '},'
   ];
@@ -84,7 +84,7 @@ Blockly.JavaScript['tilt_left'] = function (block) {
     '{',
       'delay: 3000,',
       'task: function () {',
-        'drone.tiltLeft({steps: 20});',
+        'drone.tiltLeft({steps: 40});',
       '}',
     '},'
   ];
@@ -96,7 +96,7 @@ Blockly.JavaScript['tilt_right'] = function (block) {
     '{',
       'delay: 3000,',
       'task: function () {',
-        'drone.tiltRight({steps: 20});',
+        'drone.tiltRight({steps: 40});',
       '}',
     '},'
   ];
@@ -132,7 +132,7 @@ Blockly.JavaScript['flip'] = function (block) {
     '{',
       'delay: 3000,',
       'task: function () {',
-        'drone.frontFlip({steps: 40});',
+      'drone.frontFlip({steps: 40});',
       '}',
     '},'
   ];
