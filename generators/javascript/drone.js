@@ -1,140 +1,80 @@
+/* globals Blockly goog */
+
 /**
  * @fileoverview Generating JavaScript for drone blocks.
  * @author ETA
  */
+
 'use strict';
 
 goog.require('Blockly.JavaScript');
 
+Blockly.JavaScript['drone_controls_repeat_ext'] = function(block) {
+  // Repeat n times (external number).
+  var repeats = Blockly.JavaScript.valueToCode(block, 'TIMES',
+      Blockly.JavaScript.ORDER_ASSIGNMENT) || '0';
+  var branch = Blockly.JavaScript.statementToCode(block, 'DO');
+  branch = Blockly.JavaScript.addLoopTrap(branch, block.id);
+  var code = '';
+  var loopVar = Blockly.JavaScript.variableDB_.getDistinctName(
+      'count', Blockly.Variables.NAME_TYPE);
+  var endVar = repeats;
+  if (!repeats.match(/^\w+$/) && !Blockly.isNumber(repeats)) {
+    var endVar = Blockly.JavaScript.variableDB_.getDistinctName(
+        'repeat_end', Blockly.Variables.NAME_TYPE);
+    code += 'var ' + endVar + ' = ' + repeats + ';\n';
+  }
+  code += 'for (var ' + loopVar + ' = 0; ' +
+      loopVar + ' < ' + endVar + '; ' +
+      loopVar + '++) {\n' +
+      branch + '}\n';
+  return code;
+};
+
+Blockly.JavaScript['hover'] = function (block) {
+  return drone.hover(); + '\n';
+};
+
 Blockly.JavaScript['take_off'] = function (block) {
-  var takeOff = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.takeOff();',
-        'drone.flatTrim();',
-      '}',
-    '},'
-  ];
-  return takeOff.join('\n') + '\n';
+  return drone.takeOff(); + '\n';
 };
 
 Blockly.JavaScript['land'] = function (block) {
-  var land = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.land();',
-      '}',
-    '}'
-  ];
-  return land.join('\n') + '\n';
+  return drone.land(); + '\n';
 };
 
 Blockly.JavaScript['go_forward'] = function (block) {
-  var forward = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.forward({steps: 40});',
-      '}',
-    '},'
-  ];
-  return forward.join('\n') + '\n';
+  return drone.forward(); + '\n';
 };
 
 Blockly.JavaScript['go_backward'] = function (block) {
-  var backward = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.backward({steps: 40});',
-      '}',
-    '},'
-  ];
-  return backward.join('\n') + '\n';
+  return drone.backward(); + '\n';
 };
 
 Blockly.JavaScript['turn_left'] = function (block) {
-  var turnLeft = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.turnLeft({steps: 40});',
-      '}',
-    '},'
-  ];
-  return turnLeft.join('\n') + '\n';
+  return drone.turnLeft(); + '\n';
 };
 
 Blockly.JavaScript['turn_right'] = function (block) {
-  var turnRight = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.turnRight({steps: 40});',
-      '}',
-    '},'
-  ];
-  return turnRight.join('\n') + '\n';
+  return drone.turnRight(); + '\n';
 };
 
 Blockly.JavaScript['tilt_left'] = function (block) {
-  var tiltLeft = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.tiltLeft({steps: 40});',
-      '}',
-    '},'
-  ];
-  return tiltLeft.join('\n') + '\n';
+  return drone.tiltLeft(); + '\n';
 };
 
 Blockly.JavaScript['tilt_right'] = function (block) {
-  var tiltRight = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.tiltRight({steps: 40});',
-      '}',
-    '},'
-  ];
-  return tiltRight.join('\n') + '\n';
+  return drone.tiltRight(); + '\n';
 };
 
 Blockly.JavaScript['go_up'] = function (block) {
-  var up = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.up({steps: 40});',
-      '}',
-    '},'
-  ];
-  return up.join('\n') + '\n';
+  return drone.up(); + '\n';
 };
 
 Blockly.JavaScript['go_down'] = function (block) {
-  var down = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-        'drone.down({steps: 40});',
-      '}',
-    '},'
-  ];
-  return down.join('\n') + '\n';
+  return drone.down(); + '\n';
 };
 
 Blockly.JavaScript['flip'] = function (block) {
-  var flip = [
-    '{',
-      'delay: 3000,',
-      'task: function () {',
-      'drone.frontFlip({steps: 40});',
-      '}',
-    '},'
-  ];
-  return flip.join('\n') + '\n';
+  return drone.frontFlip(); + '\n';
 };
