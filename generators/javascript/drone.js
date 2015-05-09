@@ -32,49 +32,49 @@ Blockly.JavaScript['drone_controls_repeat_ext'] = function(block) {
 };
 
 Blockly.JavaScript['hover'] = function (block) {
-  return drone.hover(); + '\n';
+  return 'drone.hover();\n';
 };
 
 Blockly.JavaScript['take_off'] = function (block) {
-  return drone.takeOff(); + '\n';
+  return 'drone.takeOff();\n';
 };
 
 Blockly.JavaScript['land'] = function (block) {
-  return drone.land(); + '\n';
+  return 'drone.land();\n';
 };
 
 Blockly.JavaScript['go_forward'] = function (block) {
-  return drone.forward(); + '\n';
+  return 'drone.forward();\n';
 };
 
 Blockly.JavaScript['go_backward'] = function (block) {
-  return drone.backward(); + '\n';
+  return 'drone.backward();\n';
 };
 
 Blockly.JavaScript['turn_left'] = function (block) {
-  return drone.turnLeft(); + '\n';
+  return 'drone.turnLeft();\n';
 };
 
 Blockly.JavaScript['turn_right'] = function (block) {
-  return drone.turnRight(); + '\n';
+  return 'drone.turnRight();\n';
 };
 
 Blockly.JavaScript['tilt_left'] = function (block) {
-  return drone.tiltLeft(); + '\n';
+  return 'drone.tiltLeft();\n';
 };
 
 Blockly.JavaScript['tilt_right'] = function (block) {
-  return drone.tiltRight(); + '\n';
+  return 'drone.tiltRight();\n';
 };
 
 Blockly.JavaScript['go_up'] = function (block) {
-  return drone.up(); + '\n';
+  return 'drone.up();\n';
 };
 
 Blockly.JavaScript['go_down'] = function (block) {
-  return drone.down(); + '\n';
+  return 'drone.down();\n';
 };
 
 Blockly.JavaScript['flip'] = function (block) {
-  return drone.frontFlip(); + '\n';
+  return 'drone.frontFlip();\n';
 };
