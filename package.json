@@ -1,7 +1,6 @@
 {
   "name": "newdavinci-blockly",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "New daVinci Fork of Blockly",
   "main": "blockly_compressed.js",
   "directories": {
