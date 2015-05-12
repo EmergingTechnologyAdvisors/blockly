@@ -8,24 +8,20 @@
 'use strict';
 
 goog.provide('Blockly.Blocks.drone.loops');
-goog.provide('Blockly.Blocks.drone.yaw');
-goog.provide('Blockly.Blocks.drone.roll');
-goog.provide('Blockly.Blocks.drone.pitch');
-goog.provide('Blockly.Blocks.drone.altitude');
-goog.provide('Blockly.Blocks.drone.takeoff');
-goog.provide('Blockly.Blocks.drone.land');
-goog.provide('Blockly.Blocks.drone.flip');
+goog.provide('Blockly.Blocks.drone.rotation');
+goog.provide('Blockly.Blocks.drone.horizontal');
+goog.provide('Blockly.Blocks.drone.vertical');
+goog.provide('Blockly.Blocks.drone.startstop');
+goog.provide('Blockly.Blocks.drone.aerobatics');
 goog.provide('Blockly.Blocks.drone.hover');
 
-Blockly.Blocks.drone.loops.HUE = 0;
-Blockly.Blocks.drone.yaw.HUE = 280;
-Blockly.Blocks.drone.roll.HUE = 200;
-Blockly.Blocks.drone.pitch.HUE = 260;
-Blockly.Blocks.drone.altitude.HUE = 60;
-Blockly.Blocks.drone.takeoff.HUE = 120;
-Blockly.Blocks.drone.land.HUE = 0;
-Blockly.Blocks.drone.flip.HUE = 300;
-Blockly.Blocks.drone.hover.HUE = 30;
+Blockly.Blocks.drone.loops.HUE = 30; // orange
+Blockly.Blocks.drone.rotation.HUE = 200; // light blue
+Blockly.Blocks.drone.horizontal.HUE = 260; // purple
+Blockly.Blocks.drone.vertical.HUE = 120; // green
+Blockly.Blocks.drone.startstop.HUE = 0; // red
+Blockly.Blocks.drone.aerobatics.HUE = 300; // pink
+Blockly.Blocks.drone.hover.HUE = 60; // gold
 
 Blockly.Blocks['drone_controls_repeat_ext'] = {
   /**
@@ -60,16 +56,16 @@ Blockly.Blocks['hover'] = {
 
 Blockly.Blocks['take_off'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.takeoff.HUE);
+    this.setColour(Blockly.Blocks.drone.startstop.HUE);
     this.appendDummyInput()
-      .appendField('Take Off');
+      .appendField('Takeoff');
     this.setNextStatement(true);
   }
 };
 
 Blockly.Blocks['land'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.land.HUE);
+    this.setColour(Blockly.Blocks.drone.startstop.HUE);
     this.appendDummyInput()
       .appendField('Land');
     this.setPreviousStatement(true);
@@ -78,9 +74,9 @@ Blockly.Blocks['land'] = {
 
 Blockly.Blocks['go_forward'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.pitch.HUE);
+    this.setColour(Blockly.Blocks.drone.horizontal.HUE);
     this.appendDummyInput()
-      .appendField('Forward');
+      .appendField('Move Forward');
     this.setNextStatement(true);
     this.setPreviousStatement(true);
   }
@@ -88,9 +84,9 @@ Blockly.Blocks['go_forward'] = {
 
 Blockly.Blocks['go_backward'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.pitch.HUE);
+    this.setColour(Blockly.Blocks.drone.horizontal.HUE);
     this.appendDummyInput()
-      .appendField('Backward');
+      .appendField('Move Backward');
     this.setNextStatement(true);
     this.setPreviousStatement(true);
   }
@@ -98,7 +94,7 @@ Blockly.Blocks['go_backward'] = {
 
 Blockly.Blocks['turn_left'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.yaw.HUE);
+    this.setColour(Blockly.Blocks.drone.rotation.HUE);
     this.appendDummyInput()
       .appendField('Turn Left');
     this.setNextStatement(true);
@@ -108,7 +104,7 @@ Blockly.Blocks['turn_left'] = {
 
 Blockly.Blocks['turn_right'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.yaw.HUE);
+    this.setColour(Blockly.Blocks.drone.rotation.HUE);
     this.appendDummyInput()
       .appendField('Turn Right');
     this.setNextStatement(true);
@@ -118,9 +114,9 @@ Blockly.Blocks['turn_right'] = {
 
 Blockly.Blocks['tilt_left'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.roll.HUE);
+    this.setColour(Blockly.Blocks.drone.horizontal.HUE);
     this.appendDummyInput()
-      .appendField('Tilt Left');
+      .appendField('Move Left');
     this.setNextStatement(true);
     this.setPreviousStatement(true);
   }
@@ -128,9 +124,9 @@ Blockly.Blocks['tilt_left'] = {
 
 Blockly.Blocks['tilt_right'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.roll.HUE);
+    this.setColour(Blockly.Blocks.drone.horizontal.HUE);
     this.appendDummyInput()
-      .appendField('Tilt Right');
+      .appendField('Move Right');
     this.setNextStatement(true);
     this.setPreviousStatement(true);
   }
@@ -138,7 +134,7 @@ Blockly.Blocks['tilt_right'] = {
 
 Blockly.Blocks['go_up'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.altitude.HUE);
+    this.setColour(Blockly.Blocks.drone.vertical.HUE);
     this.appendDummyInput()
       .appendField('Go Up');
     this.setNextStatement(true);
@@ -148,7 +144,7 @@ Blockly.Blocks['go_up'] = {
 
 Blockly.Blocks['go_down'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.altitude.HUE);
+    this.setColour(Blockly.Blocks.drone.vertical.HUE);
     this.appendDummyInput()
       .appendField('Go Down');
     this.setNextStatement(true);
@@ -158,7 +154,7 @@ Blockly.Blocks['go_down'] = {
 
 Blockly.Blocks['flip'] = {
   init: function() {
-    this.setColour(Blockly.Blocks.drone.flip.HUE);
+    this.setColour(Blockly.Blocks.drone.aerobatics.HUE);
     this.appendDummyInput()
       .appendField('Flip');
     this.setNextStatement(true);
