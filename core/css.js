@@ -321,6 +321,7 @@ Blockly.Css.CONTENT = [
 
   '.blocklyFlyoutBackground {',
   '  fill: url(#blocklyGridPattern);',
+  ' margin-right: 10px;',
   '}',
 
   '.blocklyColourBackground {',
