@@ -456,13 +456,7 @@ Blockly.Flyout.prototype.reflow = function() {
   var flyoutWidth = 0;
   var margin = this.CORNER_RADIUS;
   var blocks = this.workspace_.getTopBlocks(false);
-  for (var x = 0, block; block = blocks[x]; x++) {
-    var root = block.getSvgRoot();
-    var blockHW = block.getHeightWidth();
-    flyoutWidth = Math.max(flyoutWidth, blockHW.width);
-  }
-  flyoutWidth += margin + Blockly.BlockSvg.TAB_WIDTH + margin / 2 +
-                 Blockly.Scrollbar.scrollbarThickness;
+  flyoutWidth = 192;
   if (this.width_ != flyoutWidth) {
     for (var x = 0, block; block = blocks[x]; x++) {
       var blockHW = block.getHeightWidth();
