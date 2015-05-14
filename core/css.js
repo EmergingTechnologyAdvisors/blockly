@@ -391,6 +391,8 @@ Blockly.Css.CONTENT = [
   '  overflow-x: visible;',
   '  overflow-y: auto;',
   '  position: absolute;',
+  '  padding-right: 10px;',
+  '  margin-right: 10px;',
   '}',
 
   '.blocklyTreeRoot {',
@@ -409,7 +411,7 @@ Blockly.Css.CONTENT = [
   '}',
 
   '.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {',
-  '  padding-right: 10px;',
+  '  padding-right: 0;',
   '  padding-left: 1em !important;',
   '}',
 
