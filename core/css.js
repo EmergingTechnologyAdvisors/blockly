@@ -321,7 +321,6 @@ Blockly.Css.CONTENT = [
 
   '.blocklyFlyoutBackground {',
   '  fill: url(#blocklyGridPattern);',
-  ' padding-right: 10px;',
   '}',
 
   '.blocklyColourBackground {',
@@ -410,7 +409,7 @@ Blockly.Css.CONTENT = [
   '}',
 
   '.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {',
-  '  padding-right: 0;',
+  '  padding-right: 10px;',
   '  padding-left: 1em !important;',
   '}',
 
