@@ -456,7 +456,7 @@ Blockly.Flyout.prototype.reflow = function() {
   var flyoutWidth = 0;
   var margin = this.CORNER_RADIUS;
   var blocks = this.workspace_.getTopBlocks(false);
-  flyoutWidth = 193;
+  flyoutWidth = 194;
   if (this.width_ != flyoutWidth) {
     for (var x = 0, block; block = blocks[x]; x++) {
       var blockHW = block.getHeightWidth();
