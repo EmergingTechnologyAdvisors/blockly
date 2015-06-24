@@ -1,6 +1,6 @@
 {
   "name": "newdavinci-blockly",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "New daVinci Fork of Blockly",
   "main": "blockly_compressed.js",
   "directories": {
@@ -16,8 +16,20 @@
   "keywords": [
     "blockly"
   ],
-  "author": "Emerging Technology Advisors",
-  "license": "ISC",
+  "keywords": [
+    "blockly",
+    "blocks",
+    "parrot",
+    "drone",
+    "quadcopter",
+    "flight"
+  ],
+  "author": {
+    "name": "Emerging Technology Advisors",
+    "email": "team@eta.im",
+    "web": "http://eta.im/"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/EmergingTechnologyAdvisors/blockly/issues"
   },
